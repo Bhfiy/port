@@ -50,12 +50,12 @@ body {
     text-decoration: none;
     color: white;
     padding: 25px;
-    font-weight: 400;
+    font-weight: 500;
+    transition: .3s;
 }
 
 #navbar ul li a:hover {
     color: #ea1538;
-    transition: .3s;
 }
 
 #navbar button {
@@ -79,9 +79,8 @@ body {
 
 /* Home */
 section {
+
     padding: 160px 15% 120px;
-    height: 100vh;
-    width: 100%;
 }
 
 /* .boxtext{
@@ -94,7 +93,7 @@ section {
 #home {
     /* background: url(background.png) no-repeat center center/cover; */
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     display: flex;
     align-items: center;
@@ -113,6 +112,9 @@ section {
 
 /* About */
 #about {
+    width: 100%;
+    position: relative;
+    /* height: 100vh; */
     background-color: rgb(31, 30, 30);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -120,7 +122,12 @@ section {
 }
 
 #about-img {
+    display:block;
     overflow: hidden;
+    width: 100%;
+}
+#about-img img{
+    display:block;
 }
 
 #about-text h2 {
@@ -128,7 +135,7 @@ section {
     margin-bottom: 10px;
 }
 
-.read {
+.read{
     border-radius: 5px;
     cursor: pointer;
     width: 100px;
@@ -146,6 +153,11 @@ section {
 }
 
 /* Services */
+#services{
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+}
 
 .mainText {
     text-align: center;
@@ -154,8 +166,8 @@ section {
 .servicesContent {
     margin-top: 70px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 51px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+    gap: 50px;
 }
 
 .servicesContent i {
@@ -177,8 +189,8 @@ section {
 
 /* Portfolio */
 #portfolio {
+    position: relative;
     padding: 50px;
-    height: 100vh;
     width: 100%;
     background-color: rgb(31, 30, 30);
 }
@@ -236,4 +248,56 @@ section {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+/* Contact */
+#contact{
+    width: 100%;
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.contactText{
+    display: inline;
+}
+.contactText h2{
+    margin-bottom: 10px;
+}
+.contactText h4{
+    margin-bottom: 10px;
+}
+.contactForm{
+ margin-left: -197px;
+}
+.contactForm input,textarea{
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: rgb(31, 30, 30) ;
+    transition: .45s;
+}
+.contactForm .submit{
+    background-color: #ea1538;
+    cursor: pointer;
+    width: 160px;
+    background-color: #ea1538;
+    margin-top: 19px;
+    padding: 7px;
+    border: none;
+    font-weight: 600;
+    transition: .3s;
+}
+.contactForm input:hover ,textarea:hover{
+    transform: translateX(8px);
+}
+.submit:hover {
+    background-color: white;
+    color: #ea1538;
 }
